@@ -1,38 +1,69 @@
-using UnityEngine;
 using System.Collections;
-public class PlayerController : MonoBehaviour {
+using System.Collections.Generic;
+using UnityEngine;
+
+public class playerControl : MonoBehaviour {
+	public bool Ranim = false;
+	public bool Lanim = false;
+	public bool UPanim = false;
+	public bool Danim = false;
+
+	private Rigidbody2D rb2d;
 	public float moveSpeed;
-
-	public float jumpHeight;
-
-	public Transform groundCheck;
-
-	public float groundCheckRadius;
-
-	public LayerMask whatIsGround;
-
-	private bool grounded;
+	Animator anim;
 
 	// Use this for initialization
-
 	void Start () {
+		rb2d = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator>();
+		int up = Animator.StringToHash("up");
+
+		int down = Animator.StringToHash("down");
+
+		int left = Animator.StringToHash("left");
+
+		int right = Animator.StringToHash("right");
+
 	}
-	void fixedUpdate() {
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatIsGround);
+
+	void isAlreadyPlaying()
+	{
+		
 	}
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.W)) {
+		
 
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-		}
-		if (Input.GetKey (KeyCode.D)) {
+		if(Input.GetAxisRaw ("Horizontal") > 0.5f){
+			
+			transform.Translate(new Vector3(Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
 
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			anim.Play ("Right");
 		}
-		if (Input.GetKey (KeyCode.A)) {
+		else if(Input.GetAxisRaw ("Horizontal") < -0.5f){
+			
+			transform.Translate(new Vector3(Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
 
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			anim.Play ("Left");
 		}
+
+		else if(Input.GetAxisRaw ("Vertical") > 0.5f){
+			
+			transform.Translate(new Vector3(0f, Input.GetAxisRaw ("Vertical") * moveSpeed * Time.deltaTime, 0f));
+
+			anim.Play ("Up");
+		}
+
+		else if(Input.GetAxisRaw ("Vertical") < -0.5f){
+			
+			transform.Translate(new Vector3(0f, Input.GetAxisRaw ("Vertical") * moveSpeed * Time.deltaTime, 0f));
+
+			anim.Play ("Down");
+		}
+
+		//anim.SetFloat ("MoveX", Input.GetAxisRaw("Horizontal"));
+		//anim.SetFloat ("MoveY", Input.GetAxisRaw("Vertical"));
 	}
-}
+	}
+
+
