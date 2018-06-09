@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class SubjectsControl : MonoBehaviour {
 	public int subjectscount;
 	public subject sub;
@@ -32,9 +30,7 @@ public class SubjectsControl : MonoBehaviour {
 
 	void DayStart()
 	{
-		//sub = new subject ();
-		//sub.SubjectGenerate ();
-		//PlayerPrefs.SetInt ("lesson1", sub.room);
+		
 		for (int i = 1; i <= subjectscount; i++) {
 			sub = new subject ();
 			sub.SubjectGenerate ();
