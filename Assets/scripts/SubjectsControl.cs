@@ -5,6 +5,7 @@ using UnityEngine;
 public class SubjectsControl : MonoBehaviour {
 	public int subjectscount;
 	public subject sub;
+	public string str;
 	// Use this for initialization
 	void Start () {
 
@@ -16,6 +17,7 @@ public class SubjectsControl : MonoBehaviour {
 			PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
 		}
 		subjectscount = Random.Range(2,6);
+
 		DayStart();
 
 
@@ -34,9 +36,11 @@ public class SubjectsControl : MonoBehaviour {
 		for (int i = 1; i <= subjectscount; i++) {
 			sub = new subject ();
 			sub.SubjectGenerate ();
-			PlayerPrefs.SetInt ("lesson"+i, sub.getroom());
-			Debug.Log (sub.getroom()+ " "+i);
+			str = "lesson" + i.ToString();
+			PlayerPrefs.SetInt (str, sub.getroom());
+
 		}
+		Debug.Log ("SUBJECT GENERATE COMPLETED");
 
 	}
 		
@@ -56,13 +60,13 @@ public class subject {
 	}
 
 
-	string[] subjects = {"Математика- Бородина","Теория Познания- Максудова" };
-	int[] rooms = {209,203 };
+	string[] subjects = {"Математика- Бородина","Теория Познания- Максудова","lol","kek" };
+	int[] rooms = {209,203,666,999 };
 
 	public void SubjectGenerate()
 	{
 
-		tmp=Random.Range(0,2);
+		tmp=Random.Range(0,4);
 		name = subjects[tmp];
 		room = rooms[tmp];
 
