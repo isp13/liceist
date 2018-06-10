@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class SubjectsControl : MonoBehaviour {
 	public int subjectscount;
 	public subject sub;
-	public string str;
+	string str;
 	public Text txt1;
 	public Text txt2;
 	public Text txt3;
@@ -15,6 +15,7 @@ public class SubjectsControl : MonoBehaviour {
 	void Start () {
 
 		if (!PlayerPrefs.HasKey ("lesson1")) {
+			
 			PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
 			PlayerPrefs.SetInt ("lesson2", 0);//10:45-12:10
 			PlayerPrefs.SetInt ("lesson3", 0);//12:20-13:45
@@ -22,7 +23,8 @@ public class SubjectsControl : MonoBehaviour {
 			PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
 		}
 		subjectscount = Random.Range(2,6);
-
+		PlayerPrefs.SetInt ("amountoflessons",subjectscount);
+		PlayerPrefs.Save ();
 		DayStart();
 
 
@@ -33,7 +35,10 @@ public class SubjectsControl : MonoBehaviour {
 	void Update () {
 		
 	}
-
+	public int getnumofclasses()
+	{
+		return subjectscount;
+	}
 
 	void DayStart()
 	{
@@ -44,15 +49,15 @@ public class SubjectsControl : MonoBehaviour {
 			str = "lesson" + i.ToString();
 			PlayerPrefs.SetInt (str, sub.getroom());
 			if (i== 1)
-				txt1.text = "9:00-10:25 "+(sub.getname()).ToString()+" кабинет: "+(sub.getroom()).ToString();
+				txt1.text = "9:00-10:25 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
 			if (i== 2)
-				txt2.text = "10:45-12:10 "+(sub.getname()).ToString()+" кабинет: "+(sub.getroom()).ToString();
+				txt2.text = "10:45-12:10 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
 			if (i== 3)
-				txt3.text = "12:20-13:45 "+(sub.getname()).ToString()+" кабинет: "+(sub.getroom()).ToString();
+				txt3.text = "12:20-13:45 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
 			if (i== 4)
-				txt4.text = "14:45-16:10 "+(sub.getname()).ToString()+" кабинет: "+(sub.getroom()).ToString();
+				txt4.text = "14:45-16:10 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
 			if (i== 5)
-				txt5.text = "16:20-17:45 "+(sub.getname()).ToString()+" кабинет: "+(sub.getroom()).ToString();
+				txt5.text = "16:20-17:45 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
 
 		}
 		Debug.Log ("SUBJECT GENERATE COMPLETED");

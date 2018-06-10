@@ -19,6 +19,7 @@ public class Clock : MonoBehaviour {
 			minutes = 30;
 			PlayerPrefs.SetInt ("hours", hours);
 			PlayerPrefs.SetInt ("minutes", minutes);
+			Debug.Log ("TIME LOAD COMPLETED");
 		} 
 		else {
 			hours = PlayerPrefs.GetInt("hours");
@@ -54,11 +55,16 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(5f);
+			yield return new WaitForSeconds(1f);
 
 
 			PlayerPrefs.SetInt ("hours",hours);
 			PlayerPrefs.SetInt ("minutes",minutes);
+			if (hours==9 && minutes<=15 && PlayerPrefs.GetInt("amountoflessons")>=1)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson1"));
+			if (hours==10 && minutes>=45 && minutes<=59 && PlayerPrefs.GetInt("amountoflessons")>=2)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson2"));
+			if (hours==12 && minutes>=20 && minutes<=35 && PlayerPrefs.GetInt("amountoflessons")>=3)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson3"));
+			if (hours==14 && minutes>=45 && PlayerPrefs.GetInt("amountoflessons")>=4)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson4"));
+			if (hours==16 && minutes>=20 && minutes<=35 && PlayerPrefs.GetInt("amountoflessons")>=5)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson5"));
 			PlayerPrefs.Save ();
 		}
 	}
