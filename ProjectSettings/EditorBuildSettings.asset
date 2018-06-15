@@ -11,3 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SecondFloor.unity
     guid: 6e053502d2c9b41088b90f901bbc4642
+  - enabled: 1
+    path: Assets/ThirdFloor.unity
+    guid: ee1852f6205d54d19a127dc54b14651c
+  - enabled: 1
+    path: Assets/FifthFloor.unity
+    guid: a90ce206206fb4084a2016c57937df38
+  - enabled: 1
+    path: Assets/FourthFloor.unity
+    guid: 93ad25a5e7e964163aabd9b8a7fa196a

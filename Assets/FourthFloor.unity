@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba42075fb21b45e7bff125f80c27e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadlevel: FirstFloor
+  loadlevel: ThirdFloor
 --- !u!61 &136689207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6543,7 +6543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba42075fb21b45e7bff125f80c27e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadlevel: ThirdFloor
+  loadlevel: FifthFloor
 --- !u!61 &708537338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9958,7 +9958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba42075fb21b45e7bff125f80c27e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadlevel: FirstFloor
+  loadlevel: ThirdFloor
 --- !u!61 &1689286054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53754,7 +53754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba42075fb21b45e7bff125f80c27e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadlevel: ThirdFloor
+  loadlevel: FifthFloor
 --- !u!61 &2049303862
 BoxCollider2D:
   m_ObjectHideFlags: 0
