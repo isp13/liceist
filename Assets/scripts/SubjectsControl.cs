@@ -12,7 +12,7 @@ public class SubjectsControl : MonoBehaviour {
 	public Text txt4;
 	public Text txt5;
 	public Text days;
-
+	public GameObject EndingPanel;
 	// Use this for initialization
 	void Start () {
 
@@ -24,6 +24,8 @@ public class SubjectsControl : MonoBehaviour {
 			PlayerPrefs.SetInt ("lesson4", 0);//14:45-16:10
 			PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
 		}
+		int k = PlayerPrefs.GetInt ("dayscount");
+		days.text = k.ToString();
 		subjectscount = Random.Range(2,6);
 		PlayerPrefs.SetInt ("amountoflessons",subjectscount);
 		PlayerPrefs.Save ();
@@ -43,8 +45,8 @@ public class SubjectsControl : MonoBehaviour {
 
 	public void DayStart()
 	{
-		int k = PlayerPrefs.GetInt ("dayscount");
-		days.text = k.ToString();
+		PlayerPrefs.SetInt ("needsnewday", 0);
+
 		for (int i = 1; i <= subjectscount; i++) {
 			sub = new subject ();
 			sub.SubjectGenerate ();
@@ -67,9 +69,11 @@ public class SubjectsControl : MonoBehaviour {
 
 	}
 
-	void DayEnd()
+	public void DayEnd()
 	{
-		
+		PlayerPrefs.SetInt ("IQ", PlayerPrefs.GetInt("IQ")-2);
+		PlayerPrefs.SetInt ("hours", 8);
+		PlayerPrefs.SetInt ("minutes", 30);
 		PlayerPrefs.SetInt ("dayscount", PlayerPrefs.GetInt("dayscount")+1);
 		PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
 		PlayerPrefs.SetInt ("lesson2", 0);//10:45-12:10
