@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: 271203ad7c9c54afea50129faa324af9
-timeCreated: 1528039442
+timeCreated: 1529136304
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: icons_10_0
+    21300002: icons_10_1
+    21300004: icons_10_2
+    21300006: icons_10_3
+    21300008: icons_10_4
+    21300010: icons_10_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -96,6 +101,76 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: icons_10_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 113
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: icons_10_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 98
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: icons_10_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: icons_10_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 64
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: icons_10_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
