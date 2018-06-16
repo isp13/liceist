@@ -7,8 +7,8 @@ public class LIFEandIQ : MonoBehaviour {
 	public GameObject heart2;
 	public GameObject heart3;
 	public Text IQText;
-	int iqcount;
-	int hearts;
+	public int iqcount;
+	public int hearts;
 	// Use this for initialization
 	void Start () {
 		heart1.SetActive (false);
@@ -50,7 +50,10 @@ public class LIFEandIQ : MonoBehaviour {
 
 
 	}
-
+	public int getiq()
+	{
+		return iqcount;
+	}
 	// Update is called once per frame
 	void Update () {
 

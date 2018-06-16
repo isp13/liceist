@@ -8,8 +8,10 @@ public class Clock : MonoBehaviour {
 
 	public int hours;
 	public int minutes;
-
-
+	public GameObject dialogCan;
+	public GameObject LifeIQCan;
+	public GameObject TimeCan;
+	public GameObject DayEndingCan;
 	 
 	void Start () {
 		if (!PlayerPrefs.HasKey ("hours")) {
@@ -34,7 +36,7 @@ public class Clock : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-	
+
 
 
 	}
@@ -44,6 +46,11 @@ public class Clock : MonoBehaviour {
 	{
 		while(true)
 		{
+
+
+
+
+
 			TimeText.text = "";
 			minutes++;
 			if (minutes == 60) {
@@ -51,11 +58,23 @@ public class Clock : MonoBehaviour {
 				hours++;
 			}
 
+			if(hours>=20)
+			{
+				hours = 8;
+				minutes = 30;
+				PlayerPrefs.SetInt ("needsnewday", 1);
+				dialogCan.SetActive (false);
+				LifeIQCan.SetActive (false);
+				TimeCan.SetActive (false);
+				DayEndingCan.SetActive (true);
+				//yield break;
+			}
+
 			TimeText.text = hours+":";
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(0.01f);
 
 
 			PlayerPrefs.SetInt ("hours",hours);

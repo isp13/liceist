@@ -17,7 +17,7 @@ public class DialogSystem : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string> ();
-		TCanvas=GameObject.Find ("DialogCanvas");
+		//TCanvas=GameObject.Find ("DialogCanvas");
 		TCanvas.SetActive(false);
 	}
 	
