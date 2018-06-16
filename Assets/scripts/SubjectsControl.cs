@@ -11,11 +11,13 @@ public class SubjectsControl : MonoBehaviour {
 	public Text txt3;
 	public Text txt4;
 	public Text txt5;
+	public Text days;
+
 	// Use this for initialization
 	void Start () {
 
 		if (!PlayerPrefs.HasKey ("lesson1")) {
-			
+			PlayerPrefs.SetInt ("dayscount", 1);//days
 			PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
 			PlayerPrefs.SetInt ("lesson2", 0);//10:45-12:10
 			PlayerPrefs.SetInt ("lesson3", 0);//12:20-13:45
@@ -25,9 +27,8 @@ public class SubjectsControl : MonoBehaviour {
 		subjectscount = Random.Range(2,6);
 		PlayerPrefs.SetInt ("amountoflessons",subjectscount);
 		PlayerPrefs.Save ();
-		DayStart();
 
-
+		DayStart ();
 
 	}
 	
@@ -40,9 +41,10 @@ public class SubjectsControl : MonoBehaviour {
 		return subjectscount;
 	}
 
-	void DayStart()
+	public void DayStart()
 	{
-		
+		int k = PlayerPrefs.GetInt ("dayscount");
+		days.text = k.ToString();
 		for (int i = 1; i <= subjectscount; i++) {
 			sub = new subject ();
 			sub.SubjectGenerate ();
@@ -58,7 +60,7 @@ public class SubjectsControl : MonoBehaviour {
 				txt4.text = "14:45-16:10 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
 			if (i== 5)
 				txt5.text = "16:20-17:45 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
-
+			
 		}
 		Debug.Log ("SUBJECT GENERATE COMPLETED");
 
@@ -67,11 +69,14 @@ public class SubjectsControl : MonoBehaviour {
 
 	void DayEnd()
 	{
+		
+		PlayerPrefs.SetInt ("dayscount", PlayerPrefs.GetInt("dayscount")+1);
 		PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
 		PlayerPrefs.SetInt ("lesson2", 0);//10:45-12:10
 		PlayerPrefs.SetInt ("lesson3", 0);//12:20-13:45
 		PlayerPrefs.SetInt ("lesson4", 0);//14:45-16:10
 		PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
+		PlayerPrefs.Save();
 	}
 		
 }
