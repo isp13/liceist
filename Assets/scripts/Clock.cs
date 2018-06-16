@@ -44,6 +44,12 @@ public class Clock : MonoBehaviour {
 
 	}
 
+	public void settime(int h,int m)
+	{
+		hours = h;
+		minutes = m;
+	}
+
 
 	IEnumerator TestCoroutine()
 	{
@@ -63,8 +69,6 @@ public class Clock : MonoBehaviour {
 
 			if(hours>=20)
 			{
-				hours = 8;
-				minutes = 30;
 				PlayerPrefs.SetInt ("needsnewday", 1);
 				dialogCan.SetActive (false);
 				sheduleCan.SetActive (false);
@@ -75,6 +79,7 @@ public class Clock : MonoBehaviour {
 				int lessloss = PlayerPrefs.GetInt ("amountoflessons") - PlayerPrefs.GetInt ("visits");
 				freelessons.text="пар пропущено: "+lessloss.ToString();
 				DayEndingCan.SetActive (true);
+
 				//yield break;
 			}
 

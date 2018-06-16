@@ -293,6 +293,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1799878850}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &32168830 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114109147702056774, guid: 149af1928e0b841c6824ebb7b4bdfcb5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1972729197}
+  m_Script: {fileID: 11500000, guid: 6dfb1d94e2b734eb3b77c3750c4b437e, type: 3}
 --- !u!1 &45705108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,7 +2760,8 @@ MonoBehaviour:
   TimeC: {fileID: 1640024136}
   DayEndingC: {fileID: 270810324}
   sb: {fileID: 1772424436}
-  lifeaiq: {fileID: 0}
+  lifeaiq: {fileID: 1007503868}
+  clk: {fileID: 32168830}
 --- !u!4 &434715451
 Transform:
   m_ObjectHideFlags: 0

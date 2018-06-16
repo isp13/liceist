@@ -9,12 +9,15 @@ public class NewDayLevel : MonoBehaviour {
 	public GameObject DayEndingC;
 	public SubjectsControl sb;
 	public LIFEandIQ lifeaiq;
+	public Clock clk;
 	public void LoadStage()  {
 		sb.DayEnd ();
 		PlayerPrefs.SetInt ("needsnewday", 0);
+		clk.StopAllCoroutines ();
+		clk.settime (8, 30);
 
 		Application.LoadLevel ("FirstFloor");
-
+		clk.StopAllCoroutines ();
 		dialogC.SetActive (true);
 		LifeIQC.SetActive (true);
 		TimeC.SetActive (true);
