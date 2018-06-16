@@ -46,7 +46,7 @@ public class LIFEandIQ : MonoBehaviour {
 			Debug.Log ("IQ LOAD COMPLETED");
 		}
 
-		IQText.text = "IQ: "+iqcount;
+		IQText.text = "IQ : "+iqcount;
 
 
 	}

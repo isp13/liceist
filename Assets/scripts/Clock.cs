@@ -11,7 +11,10 @@ public class Clock : MonoBehaviour {
 	public GameObject dialogCan;
 	public GameObject LifeIQCan;
 	public GameObject TimeCan;
+	public GameObject sheduleCan;
 	public GameObject DayEndingCan;
+	public Text daynum;
+	public Text freelessons;
 	 
 	void Start () {
 		if (!PlayerPrefs.HasKey ("hours")) {
@@ -64,8 +67,13 @@ public class Clock : MonoBehaviour {
 				minutes = 30;
 				PlayerPrefs.SetInt ("needsnewday", 1);
 				dialogCan.SetActive (false);
+				sheduleCan.SetActive (false);
 				LifeIQCan.SetActive (false);
 				TimeCan.SetActive (false);
+				int k = PlayerPrefs.GetInt ("dayscount");
+				daynum.text = "ДЕНЬ "+k.ToString();
+				int lessloss = PlayerPrefs.GetInt ("amountoflessons") - PlayerPrefs.GetInt ("visits");
+				freelessons.text="пар пропущено: "+lessloss.ToString();
 				DayEndingCan.SetActive (true);
 				//yield break;
 			}

@@ -23,9 +23,11 @@ public class SubjectsControl : MonoBehaviour {
 			PlayerPrefs.SetInt ("lesson3", 0);//12:20-13:45
 			PlayerPrefs.SetInt ("lesson4", 0);//14:45-16:10
 			PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
+			PlayerPrefs.SetInt ("visits", 0);
+
 		}
 		int k = PlayerPrefs.GetInt ("dayscount");
-		days.text = k.ToString();
+		days.text = "ЭЛЕКТРОННЫЙ ЖУРНАЛ. День "+k.ToString();
 		subjectscount = Random.Range(2,6);
 		PlayerPrefs.SetInt ("amountoflessons",subjectscount);
 		PlayerPrefs.Save ();
@@ -71,6 +73,7 @@ public class SubjectsControl : MonoBehaviour {
 
 	public void DayEnd()
 	{
+		PlayerPrefs.SetInt ("visits", 0);
 		PlayerPrefs.SetInt ("IQ", PlayerPrefs.GetInt("IQ")-2);
 		PlayerPrefs.SetInt ("hours", 8);
 		PlayerPrefs.SetInt ("minutes", 30);

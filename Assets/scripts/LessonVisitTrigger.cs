@@ -10,7 +10,7 @@ public class LessonVisitTrigger : MonoBehaviour {
 	{
 		if (other.CompareTag("Player") && PlayerPrefs.GetInt("CurrentClass")==classID  )
 		{
-			Debug.Log ("LESSON VISITED");
+			PlayerPrefs.SetInt ("visits", PlayerPrefs.GetInt("visits")+1);
 		}
 	}
 }
