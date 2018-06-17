@@ -24,15 +24,21 @@ public class SubjectsControl : MonoBehaviour {
 			PlayerPrefs.SetInt ("lesson4", 0);//14:45-16:10
 			PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
 			PlayerPrefs.SetInt ("visits", 0);
+			subjectscount = Random.Range(2,6);
+			PlayerPrefs.SetInt ("amountoflessons",subjectscount);
+			PlayerPrefs.Save ();
 
 		}
+		subjectscount = PlayerPrefs.GetInt ("amountoflessons");
 		int k = PlayerPrefs.GetInt ("dayscount");
 		days.text = "ЭЛЕКТРОННЫЙ ЖУРНАЛ. День "+k.ToString();
-		subjectscount = Random.Range(2,6);
-		PlayerPrefs.SetInt ("amountoflessons",subjectscount);
-		PlayerPrefs.Save ();
 
-		DayStart ();
+
+		if (PlayerPrefs.GetInt ("lesson1") == 0)
+			DayStart ();
+		else {
+			ContinueDay ();
+		}
 
 	}
 	
@@ -71,6 +77,37 @@ public class SubjectsControl : MonoBehaviour {
 
 	}
 
+	public void ContinueDay()
+	{
+		Debug.Log ("Day continue");
+		sub = new subject ();
+		for (int i = 1; i <= subjectscount; i++) {
+			str = "lesson" + i.ToString();
+			int lessonid = PlayerPrefs.GetInt (str);
+			string lessonname="";
+
+			for (int j=0;j<sub.massivecount();j++)
+			{
+				if (sub.rooms [j] == lessonid)
+					lessonname = sub.subjects [j];
+			}
+
+
+			if (i== 1)
+				txt1.text = "9:00-10:25 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+			if (i== 2)
+				txt2.text = "10:45-12:10 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+			if (i== 3)
+				txt3.text = "12:20-13:45 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+			if (i== 4)
+				txt4.text = "14:45-16:10 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+			if (i== 5)
+				txt5.text = "16:20-17:45 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+
+		}
+		Debug.Log ("SUBJECT reGENERATE COMPLETED");
+	}
+
 	public void DayEnd()
 	{
 		PlayerPrefs.SetInt ("visits", 0);
@@ -102,8 +139,8 @@ public class subject {
 	}
 
 
-	string[] subjects = {"Математика- Бородина","Теория Познания- Максудова","Английский- Воронкова","Физика- Строганкова","Компьютерная Линглвистика- Хазова"  };
-	int[] rooms = {209,203,201,211,307 };
+	public string[] subjects = {"Математика- Бородина","Теория Познания- Максудова","Английский- Воронкова","Физика- Строганкова","Компьютерная Линглвистика- Хазова"  };
+	public int[] rooms = {209,203,201,211,307 };
 
 	public void SubjectGenerate()
 	{
@@ -113,7 +150,6 @@ public class subject {
 		room = rooms[tmp];
 
 	}
-
 	public string getname()
 	{
 		return name;
@@ -122,4 +158,11 @@ public class subject {
 	{
 		return room;
 	}
+	public int massivecount()
+	{
+	return subjects.Length;
+	}
+
+
+
 }

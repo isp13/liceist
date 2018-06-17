@@ -87,7 +87,7 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(0.01f);
+			yield return new WaitForSeconds(1f);//время в игре
 
 
 			PlayerPrefs.SetInt ("hours",hours);
