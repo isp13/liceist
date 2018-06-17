@@ -10,7 +10,7 @@ public class playerControl : MonoBehaviour {
 
 
 	private Rigidbody2D rb2d;
-
+	protected Joystick joystick;
 	 
 	public float moveSpeed;
 	Animator anim;
@@ -21,6 +21,7 @@ public class playerControl : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator>();
 		rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+		joystick = FindObjectOfType<Joystick> ();
 		int up = Animator.StringToHash("up");
 
 		int down = Animator.StringToHash("down");
@@ -39,16 +40,20 @@ public class playerControl : MonoBehaviour {
 	void Update () 
 	{
 		
+		rb2d.velocity = new Vector2(Mathf.Lerp(0, joystick.Horizontal* moveSpeed, 0.8f),
+			Mathf.Lerp(0, joystick.Vertical* moveSpeed, 0.8f));
+		if (joystick.Horizontal >= 0.5f) anim.Play ("Right");
+		else if (joystick.Horizontal  < -0.5f) anim.Play ("Left");
+		else if(joystick.Vertical >= 0.5f) anim.Play ("Up");
+		else if(joystick.Vertical < -0.5f) anim.Play ("Down");
 
+	//rb2d.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal")* moveSpeed, 0.8f),
+			//Mathf.Lerp(0, Input.GetAxis("Vertical")* moveSpeed, 0.8f));
 
-
-	rb2d.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal")* moveSpeed, 0.8f),
-			Mathf.Lerp(0, Input.GetAxis("Vertical")* moveSpeed, 0.8f));
-
-		if (Input.GetAxisRaw ("Horizontal") >= 0.5f) anim.Play ("Right");
-		else if (Input.GetAxisRaw ("Horizontal") < -0.5f) anim.Play ("Left");
-		else if(Input.GetAxisRaw ("Vertical") >= 0.5f) anim.Play ("Up");
-		else if(Input.GetAxisRaw ("Vertical") < -0.5f) anim.Play ("Down");
+		//if (Input.GetAxisRaw ("Horizontal") >= 0.5f) anim.Play ("Right");
+		//else if (Input.GetAxisRaw ("Horizontal") < -0.5f) anim.Play ("Left");
+		//else if(Input.GetAxisRaw ("Vertical") >= 0.5f) anim.Play ("Up");
+		//else if(Input.GetAxisRaw ("Vertical") < -0.5f) anim.Play ("Down");
 
 	
 	}
