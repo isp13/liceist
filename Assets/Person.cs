@@ -12,6 +12,9 @@ public class Person : MonoBehaviour{
 
 	public bool isWalking;
 
+	public bool onlyforwardback;
+	public bool forwardornot;
+
 	public float walkTime;
 	private float walkCounter;
 	public float waitTime;
@@ -81,7 +84,21 @@ public class Person : MonoBehaviour{
 
 	public void ChooseDircetcion()
 	{
+
 		WalkDircection = Random.Range (0, 4);
+		if (onlyforwardback)
+		{
+			if (forwardornot==true)
+			{
+				WalkDircection=1;
+				forwardornot=false;
+			}
+			else
+			{
+				WalkDircection=3;
+				forwardornot=true;
+			}
+		}
 		isWalking = true;
 		walkCounter = walkTime;
 
