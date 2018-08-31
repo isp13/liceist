@@ -1,9 +1,23 @@
 fileFormatVersion: 2
 guid: 1a47ac1d971dd4fd6b870d7e3b81dcf9
-timeCreated: 1525096200
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CommonNPS_WOMEN_0
+    21300002: CommonNPS_WOMEN_1
+    21300004: CommonNPS_WOMEN_2
+    21300006: CommonNPS_WOMEN_3
+    21300008: CommonNPS_WOMEN_4
+    21300010: CommonNPS_WOMEN_5
+    21300012: CommonNPS_WOMEN_6
+    21300014: CommonNPS_WOMEN_7
+    21300016: CommonNPS_WOMEN_8
+    21300018: CommonNPS_WOMEN_9
+    21300020: CommonNPS_WOMEN_10
+    21300022: CommonNPS_WOMEN_11
+    21300024: CommonNPS_WOMEN_12
+    21300026: CommonNPS_WOMEN_13
+    21300028: CommonNPS_WOMEN_14
+    21300030: CommonNPS_WOMEN_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -45,8 +59,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -88,7 +103,231 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 161
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 129
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 94
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 62
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_4
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 161
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 129
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 95
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 63
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 159
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 127
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_10
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 95
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 63
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_12
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 95
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_13
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 63
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_14
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 159
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPS_WOMEN_15
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 127
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
