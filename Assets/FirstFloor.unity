@@ -2084,6 +2084,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &382404746
@@ -2992,6 +2994,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 11
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 3
   waitTime: 0
 --- !u!61 &535978990
@@ -4061,6 +4065,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &563746652
@@ -5314,6 +5320,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &683822005
@@ -5431,7 +5439,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 711936620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.63, y: 0.13, z: 0}
+  m_LocalPosition: {x: -11.63, y: -0.62, z: 0}
   m_LocalScale: {x: 2.5790942, y: 2.6119323, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 723830997}
@@ -5517,8 +5525,10 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 10
   isWalking: 0
-  walkTime: 5
-  waitTime: 0
+  onlyforwardback: 1
+  forwardornot: 1
+  walkTime: 4
+  waitTime: 4
 --- !u!61 &711936626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7690,6 +7700,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 15
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 4
   waitTime: 0
 --- !u!61 &927811312
@@ -8528,6 +8540,8 @@ MonoBehaviour:
     - "\u043F\u043E\u043A\u0430 \u0434\u0430\u0432\u0430\u0439 \u043B\u043E\u0445"
   MoveSpeed: 4
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 3
 --- !u!95 &1149249367
@@ -10322,6 +10336,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 15
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 4
   waitTime: 0
 --- !u!61 &1368852519
@@ -12446,6 +12462,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 10
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 5
   waitTime: 0
 --- !u!61 &1701201675
@@ -55184,6 +55202,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 7
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 2
   waitTime: 0
 --- !u!61 &1800543507
@@ -55893,6 +55913,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &1886756109
@@ -56096,6 +56118,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &1897704992
@@ -56404,6 +56428,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &1935169642
@@ -56707,6 +56733,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 0
   isWalking: 1
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 0
   waitTime: 0
 --- !u!61 &1966786534
@@ -58541,6 +58569,8 @@ MonoBehaviour:
     - EJIRGIEGHQEHGIREGHERGHRGHGUER
   MoveSpeed: 15
   isWalking: 0
+  onlyforwardback: 0
+  forwardornot: 0
   walkTime: 4
   waitTime: 0
 --- !u!61 &2095209301
