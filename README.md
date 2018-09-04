@@ -3,6 +3,5 @@ The Liceist provides players the opportunity of experiencing a light-hearted ins
 with the main objective being that of studying!
 
 
-//Во время одного из автоматических коммитов были случайно удалены user scripts и пользовательские диаграммы
-//!ВСЕ БЫЛО ВОССТАНОВЛЕНО!
+![alt text](https://sun1-4.userapi.com/c831208/v831208994/18880d/zDBGs0epBTM.jpg)
 
