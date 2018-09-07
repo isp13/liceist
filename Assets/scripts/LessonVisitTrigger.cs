@@ -11,6 +11,9 @@ public class LessonVisitTrigger : MonoBehaviour {
 		if (other.CompareTag("Player") && PlayerPrefs.GetInt("CurrentClass")==classID  )
 		{
 			PlayerPrefs.SetInt ("visits", PlayerPrefs.GetInt("visits")+1);
+			int iqcounter=PlayerPrefs.GetInt ("IQ");
+			PlayerPrefs.SetInt ("IQ", iqcounter+2);
 		}
+		
 	}
 }
