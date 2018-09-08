@@ -6,6 +6,7 @@ TextureImporter:
     21300002: shcoolTeacchers1PART_1
     21300004: shcoolTeacchers1PART_2
     21300006: shcoolTeacchers1PART_3
+    21300008: shcoolTeacchers1PART_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -143,7 +144,21 @@ TextureImporter:
         width: 25
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shcoolTeacchers1PART_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 70
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
