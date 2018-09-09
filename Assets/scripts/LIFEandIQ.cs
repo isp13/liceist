@@ -56,7 +56,12 @@ public class LIFEandIQ : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		if (PlayerPrefs.GetInt("IQ")<0)
+		{
+			PlayerPrefs.SetInt("IQ",0);
+		}
 		iqcount=PlayerPrefs.GetInt("IQ");
+
 		IQText.text = ""+iqcount+"/100";
 	}
 
