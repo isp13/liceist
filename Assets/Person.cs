@@ -105,7 +105,7 @@ public class Person : MonoBehaviour{
 	}
 
 
-
+	
 
 
 

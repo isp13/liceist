@@ -36,6 +36,19 @@ public class playerControl : MonoBehaviour {
 	{
 		
 	}
+
+	public void freezemovement(){
+		rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+		Debug.Log("rigitbody has been frozen");
+	}
+
+	public void unfreezemovement()
+	{
+		rb2d.constraints = RigidbodyConstraints2D.None;
+		rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+		Debug.Log("rigitbody has been unfrozen");
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
