@@ -6,6 +6,10 @@ public class getstats : MonoBehaviour {
 	
 	public GameObject maincharacter;
 	public GameObject load;
+	public string whichstatstoup;
+	public int howmuch;
+	public string whichstatstodown;
+	public int howmuch2;
 	private float timer = 0;
  	private float timerMax = 0;
 	[SerializeField] private string loadlevel;
@@ -37,6 +41,12 @@ public class getstats : MonoBehaviour {
  
     yield return new WaitForSeconds (4f);
 	load.SetActive(false);
+	if (whichstatstoup=="IQ")
+	{
+		int iq=PlayerPrefs.GetInt("IQ");
+		PlayerPrefs.SetInt("IQ",iq+howmuch);
+	}
+	
 	maincharacter.GetComponent<playerControl>().unfreezemovement();
  }
 }
