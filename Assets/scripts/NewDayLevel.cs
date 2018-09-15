@@ -10,12 +10,16 @@ public class NewDayLevel : MonoBehaviour {
 	public SubjectsControl sb;
 	public LIFEandIQ lifeaiq;
 	public Clock clk;
+
 	public void LoadStage()  {
+		//	iq=10 tiredness=35
 		sb.DayEnd ();
+		PlayerPrefs.SetInt ("tiredness", 35);
 		PlayerPrefs.SetInt ("needsnewday", 0);
 		clk.StopAllCoroutines ();
 		clk.settime (8, 30);
-
+		sb.cleanuptext();
+		PlayerPrefs.SetInt ("amountoflessons",Random.Range(2,6));
 		Application.LoadLevel ("FirstFloor");
 		clk.StopAllCoroutines ();
 		dialogC.SetActive (true);

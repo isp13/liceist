@@ -29,19 +29,28 @@ public class SubjectsControl : MonoBehaviour {
 			PlayerPrefs.Save ();
 
 		}
+
 		subjectscount = PlayerPrefs.GetInt ("amountoflessons");
 		int k = PlayerPrefs.GetInt ("dayscount");
 		days.text = "ЭЛЕКТРОННЫЙ ЖУРНАЛ. День "+k.ToString();
 
+		Debug.Log (subjectscount);
 
-		if (PlayerPrefs.GetInt ("lesson1") == 0)
+		if (PlayerPrefs.GetInt ("lesson1") == 0 || 1==1)//fix error with regenerating but not generating
 			DayStart ();
 		else {
 			ContinueDay ();
 		}
 
 	}
-	
+	public void cleanuptext()
+	{
+		txt1.text = " ";
+		txt2.text = " ";
+		txt3.text = " ";
+		txt4.text = " ";
+		txt5.text = " ";
+	}
 	// Update is called once per frame
 	void Update () {
 		
@@ -53,6 +62,7 @@ public class SubjectsControl : MonoBehaviour {
 
 	public void DayStart()
 	{
+		cleanuptext();
 		PlayerPrefs.SetInt ("needsnewday", 0);
 
 		for (int i = 1; i <= subjectscount; i++) {
@@ -86,7 +96,7 @@ public class SubjectsControl : MonoBehaviour {
 			int lessonid = PlayerPrefs.GetInt (str);
 			string lessonname="";
 
-			for (int j=0;j<sub.massivecount();j++)
+			for (int j=0; j<sub.massivecount(); j++)
 			{
 				if (sub.rooms [j] == lessonid)
 					lessonname = sub.subjects [j];

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Clock : MonoBehaviour {
 	public Text TimeText;
-
+	public Text iqtext;
 	public int hours;
 	public int minutes;
 	public GameObject dialogCan;
@@ -15,6 +15,10 @@ public class Clock : MonoBehaviour {
 	public GameObject DayEndingCan;
 	public Text daynum;
 	public Text freelessons;
+	public Text scores;
+
+	private int startedwithiq;
+
 	 
 	void Start () {
 		if (!PlayerPrefs.HasKey ("hours")) {
@@ -66,7 +70,8 @@ public class Clock : MonoBehaviour {
 				minutes = 0;
 				hours++;
 			}
-
+			if (hours==9 && minutes==0)
+				startedwithiq=PlayerPrefs.GetInt("IQ");
 			if(hours>=20)
 			{
 				PlayerPrefs.SetInt ("needsnewday", 1);
@@ -77,7 +82,11 @@ public class Clock : MonoBehaviour {
 				int k = PlayerPrefs.GetInt ("dayscount");
 				daynum.text = "ДЕНЬ "+k.ToString();
 				int lessloss = PlayerPrefs.GetInt ("amountoflessons") - PlayerPrefs.GetInt ("visits");
-				freelessons.text="пар пропущено: "+lessloss.ToString();
+				int iqlost=PlayerPrefs.GetInt("IQ")-startedwithiq;
+				iqtext.text="IQ заработано: "+iqlost.ToString();
+				freelessons.text="Пар пропущено: "+lessloss.ToString();
+				int scorescount=100+iqlost+lessloss;
+				scores.text="Очков получено: "+scorescount.ToString();
 				DayEndingCan.SetActive (true);
 
 				//yield break;
@@ -87,7 +96,7 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(0.1f);//время в игре
+			yield return new WaitForSeconds(0.01f);//время в игре
 
 
 			PlayerPrefs.SetInt ("hours",hours);

@@ -8,6 +8,9 @@ public class LIFEandIQ : MonoBehaviour {
 	public GameObject heart3;
 	public Text IQText;
 	public int iqcount;
+	public Text tirednessText;
+	public int tirednesscount;
+	
 	public int hearts;
 	// Use this for initialization
 	void Start () {
@@ -38,6 +41,8 @@ public class LIFEandIQ : MonoBehaviour {
 
 
 
+
+
 		if (!PlayerPrefs.HasKey ("IQ")) {
 			iqcount = 10;
 			PlayerPrefs.SetInt ("IQ", iqcount);
@@ -48,6 +53,17 @@ public class LIFEandIQ : MonoBehaviour {
 
 		IQText.text = ""+iqcount+"/100";
 
+
+
+		if (!PlayerPrefs.HasKey ("tiredness")) {
+			tirednesscount = 35;
+			PlayerPrefs.SetInt ("tiredness", tirednesscount);
+		} else {
+			tirednesscount = PlayerPrefs.GetInt("tiredness");
+			Debug.Log ("tiredness LOAD COMPLETED");
+		}
+
+		tirednessText.text = ""+tirednesscount+"/100";
 
 	}
 	public int getiq()
@@ -60,9 +76,14 @@ public class LIFEandIQ : MonoBehaviour {
 		{
 			PlayerPrefs.SetInt("IQ",0);
 		}
+		if (PlayerPrefs.GetInt("tiredness")<0)
+		{
+			PlayerPrefs.SetInt("tiredness",0);
+		}
 		iqcount=PlayerPrefs.GetInt("IQ");
-
+		tirednesscount=PlayerPrefs.GetInt("tiredness");
 		IQText.text = ""+iqcount+"/100";
+		tirednessText.text = ""+tirednesscount+"/100";
 	}
 
 }

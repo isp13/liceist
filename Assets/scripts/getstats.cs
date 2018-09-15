@@ -25,12 +25,15 @@ public class getstats : MonoBehaviour {
 	{
 		if (other.CompareTag("Player"))
 			{
-				 maincharacter.GetComponent<playerControl>().freezemovement();
-				 load.SetActive(true);
-				 maincharacter.GetComponent<Animator>().Play("loadingtaba");
-				 StartCoroutine("wait");
+				if (whichstatstodown=="tiredness" && PlayerPrefs.GetInt("tiredness")>=5)
+				{ 
+					maincharacter.GetComponent<playerControl>().freezemovement();
+					load.SetActive(true);
+					maincharacter.GetComponent<Animator>().Play("loadingtaba");
+					StartCoroutine("wait");
 				 //load.SetActive(false);
 				 //maincharacter.GetComponent<playerControl>().unfreezemovement();
+				}
 				 
 			}
 	}
@@ -44,7 +47,16 @@ public class getstats : MonoBehaviour {
 	if (whichstatstoup=="IQ")
 	{
 		int iq=PlayerPrefs.GetInt("IQ");
+		int tired=PlayerPrefs.GetInt("tiredness");
 		PlayerPrefs.SetInt("IQ",iq+howmuch);
+		PlayerPrefs.SetInt("tiredness",tired-5);
+	}
+	if (whichstatstoup=="tiredness")
+	{
+		
+		int tired=PlayerPrefs.GetInt("tiredness");
+		
+		PlayerPrefs.SetInt("tiredness",tired+5);
 	}
 	
 	maincharacter.GetComponent<playerControl>().unfreezemovement();
