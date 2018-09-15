@@ -1,7 +1,11 @@
-# liceist
-The Liceist provides players the opportunity of experiencing a light-hearted insight into everyday school life 
-with the main objective being that of studying!
+#  Liceist #
+>The Liceist provides players the opportunity of experiencing a light-hearted insight into everyday school life with the main objective being that of studying!
+###  main menu ###
+![](showup3.gif)
 
+* Try hard study smart.
+* Level-up your IQ for getting good grades.
+* Learn how to manage your time.
+* Discover similarities in all aspects between game and real lyceum.
 
-![alt text](https://sun1-4.userapi.com/c831208/v831208994/18880d/zDBGs0epBTM.jpg)
 
