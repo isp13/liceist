@@ -81,6 +81,8 @@ public class Clock : MonoBehaviour {
 				TimeCan.SetActive (false);
 				int k = PlayerPrefs.GetInt ("dayscount");
 				daynum.text = "ДЕНЬ "+k.ToString();
+				Debug.Log("amount: "+PlayerPrefs.GetInt ("amountoflessons") );
+				Debug.Log("visits: "+PlayerPrefs.GetInt ("visits") );
 				int lessloss = PlayerPrefs.GetInt ("amountoflessons") - PlayerPrefs.GetInt ("visits");
 				int iqlost=PlayerPrefs.GetInt("IQ")-startedwithiq;
 				iqtext.text="IQ заработано: "+iqlost.ToString();
@@ -96,7 +98,7 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(0.01f);//время в игре
+			yield return new WaitForSeconds(2f);//время в игре
 
 
 			PlayerPrefs.SetInt ("hours",hours);

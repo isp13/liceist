@@ -150,7 +150,7 @@ public class subject {
 
 
 	public string[] subjects = {"Математика- Бородина","Теория Познания- Максудова","Английский- Воронкова","Физика- Строганкова","Компьютерная Линглвистика- Хазова"  };
-	public int[] rooms = {209,203,201,211,307 };
+	public int[] rooms = {208,203,201,209,307 };
 
 	public void SubjectGenerate()
 	{
