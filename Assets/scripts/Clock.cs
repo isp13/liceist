@@ -13,9 +13,16 @@ public class Clock : MonoBehaviour {
 	public GameObject TimeCan;
 	public GameObject sheduleCan;
 	public GameObject DayEndingCan;
+
 	public Text daynum;
 	public Text freelessons;
 	public Text scores;
+
+	public Text mark1;
+	public Text mark2;
+	public Text mark3;
+	public Text mark4;
+	public Text mark5;
 
 	private int startedwithiq;
 
@@ -98,7 +105,7 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(2f);//время в игре
+			yield return new WaitForSeconds(0.01f);//время в игре
 
 
 			PlayerPrefs.SetInt ("hours",hours);
@@ -106,8 +113,72 @@ public class Clock : MonoBehaviour {
 			if (hours==9 && minutes<=15 && PlayerPrefs.GetInt("amountoflessons")>=1)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson1"));
 			if (hours==10 && minutes>=45 && minutes<=59 && PlayerPrefs.GetInt("amountoflessons")>=2)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson2"));
 			if (hours==12 && minutes>=20 && minutes<=35 && PlayerPrefs.GetInt("amountoflessons")>=3)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson3"));
-			if (hours==14 && minutes>=45 && PlayerPrefs.GetInt("amountoflessons")>=4)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson4"));
+			if (hours==14 && minutes>=45 && minutes<=59 && PlayerPrefs.GetInt("amountoflessons")>=4)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson4"));
 			if (hours==16 && minutes>=20 && minutes<=35 && PlayerPrefs.GetInt("amountoflessons")>=5)PlayerPrefs.SetInt ("CurrentClass", PlayerPrefs.GetInt("lesson5"));
+
+			//mark
+			if (hours==10 && minutes==25 && PlayerPrefs.GetInt("amountoflessons")>=1)
+			{
+				if (PlayerPrefs.GetInt("wasitvisited")==1)
+				{
+					PlayerPrefs.SetInt("wasitvisited",0);
+					mark1.text="5";
+				}
+				else
+				{
+					mark1.text="H";
+				}
+			}
+			if (hours==12 && minutes==10 && PlayerPrefs.GetInt("amountoflessons")>=2)
+			{
+				if (PlayerPrefs.GetInt("wasitvisited")==1)
+				{
+					PlayerPrefs.SetInt("wasitvisited",0);
+					mark2.text="5";
+				}
+				else
+				{
+					mark2.text="H";
+				}
+
+			}
+
+			if (hours==13 && minutes==45 && PlayerPrefs.GetInt("amountoflessons")>=3)
+			{
+				if (PlayerPrefs.GetInt("wasitvisited")==1)
+				{
+					PlayerPrefs.SetInt("wasitvisited",0);
+					mark3.text="5";
+				}
+				else
+				{
+					mark3.text="H";
+				}
+			}
+			if (hours==16 && minutes==10 && PlayerPrefs.GetInt("amountoflessons")>=4)
+			{
+				if (PlayerPrefs.GetInt("wasitvisited")==1)
+				{
+					PlayerPrefs.SetInt("wasitvisited",0);
+					mark4.text="5";
+				}
+				else
+				{
+					mark4.text="H";
+				}
+			}
+			if (hours==17 && minutes==45 && PlayerPrefs.GetInt("amountoflessons")>=5)
+			{
+				if (PlayerPrefs.GetInt("wasitvisited")==1)
+				{
+					PlayerPrefs.SetInt("wasitvisited",0);
+					mark5.text="5";
+				}
+				else
+				{
+					mark5.text="H";
+				}
+			}
 			PlayerPrefs.Save ();
 		}
 	}

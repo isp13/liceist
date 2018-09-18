@@ -16,6 +16,8 @@ public class SubjectsControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		PlayerPrefs.SetInt("wasitvisited",0);
+
 		if (!PlayerPrefs.HasKey ("lesson1")) {
 			PlayerPrefs.SetInt ("dayscount", 1);//days
 			PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
