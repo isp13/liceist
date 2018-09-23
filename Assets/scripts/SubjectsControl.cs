@@ -73,15 +73,15 @@ public class SubjectsControl : MonoBehaviour {
 			str = "lesson" + i.ToString();
 			PlayerPrefs.SetInt (str, sub.getroom());
 			if (i== 1)
-				txt1.text = "9:00-10:25 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
+				txt1.text = "9:00-10:25 "+(sub.getname()).ToString()+" кб:"+(sub.getroom()).ToString();
 			if (i== 2)
-				txt2.text = "10:45-12:10 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
+				txt2.text = "10:45-12:10 "+(sub.getname()).ToString()+" кб:"+(sub.getroom()).ToString();
 			if (i== 3)
-				txt3.text = "12:20-13:45 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
+				txt3.text = "12:20-13:45 "+(sub.getname()).ToString()+" кб:"+(sub.getroom()).ToString();
 			if (i== 4)
-				txt4.text = "14:45-16:10 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
+				txt4.text = "14:45-16:10 "+(sub.getname()).ToString()+" кб:"+(sub.getroom()).ToString();
 			if (i== 5)
-				txt5.text = "16:20-17:45 "+(sub.getname()).ToString()+"\n"+" кабинет: "+(sub.getroom()).ToString();
+				txt5.text = "16:20-17:45 "+(sub.getname()).ToString()+" кб:"+(sub.getroom()).ToString();
 			
 		}
 		Debug.Log ("SUBJECT GENERATE COMPLETED");
@@ -106,15 +106,15 @@ public class SubjectsControl : MonoBehaviour {
 
 
 			if (i== 1)
-				txt1.text = "9:00-10:25 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+				txt1.text = "9:00-10:25 "+lessonname+" кб:"+(lessonid).ToString();
 			if (i== 2)
-				txt2.text = "10:45-12:10 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+				txt2.text = "10:45-12:10 "+lessonname+" кб:"+(lessonid).ToString();
 			if (i== 3)
-				txt3.text = "12:20-13:45 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+				txt3.text = "12:20-13:45 "+lessonname+" кб:"+(lessonid).ToString();
 			if (i== 4)
-				txt4.text = "14:45-16:10 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+				txt4.text = "14:45-16:10 "+lessonname+" кб:"+(lessonid).ToString();
 			if (i== 5)
-				txt5.text = "16:20-17:45 "+lessonname+"\n"+" кабинет: "+(lessonid).ToString();
+				txt5.text = "16:20-17:45 "+lessonname+" кб:"+(lessonid).ToString();
 
 		}
 		Debug.Log ("SUBJECT reGENERATE COMPLETED");
@@ -151,7 +151,7 @@ public class subject {
 	}
 
 
-	public string[] subjects = {"Математика- Бородина","Теория Познания- Максудова","Английский- Воронкова","Физика- Строганкова","Компьютерная Линглвистика- Хазова"  };
+	public string[] subjects = {"Математика","Теория Познания","Английский","Физика","Комп.Линглвистика"  };
 	public int[] rooms = {208,203,201,209,307 };
 
 	public void SubjectGenerate()
