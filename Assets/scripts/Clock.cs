@@ -26,8 +26,17 @@ public class Clock : MonoBehaviour {
 
 	private int startedwithiq;
 
-	 
+	AudioSource fxSound;
+	public AudioClip backMusic; 
+
+
+
 	void Start () {
+		fxSound = GetComponent<AudioSource> ();
+		fxSound.Play ();
+
+
+
 		if (!PlayerPrefs.HasKey ("hours")) {
 
 
@@ -45,6 +54,7 @@ public class Clock : MonoBehaviour {
 
 
 		StartCoroutine(TestCoroutine());
+
 	}
 	
 	// Update is called once per frame

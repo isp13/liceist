@@ -816,17 +816,37 @@ Prefab:
     - target: {fileID: 212240749153048896, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.693
+      value: 0.8293601
       objectReference: {fileID: 0}
     - target: {fileID: 212240749153048896, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.672
+      value: 0.80422795
       objectReference: {fileID: 0}
     - target: {fileID: 212240749153048896, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.768
+      value: 0.9191176
+      objectReference: {fileID: 0}
+    - target: {fileID: 61741233439533006, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61741233439533006, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 61963187000857274, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61963187000857274, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8807a029cbe3f458c8e72b0cb25b2fd9, type: 2}
@@ -1340,7 +1360,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 154.5
+  field of view: 149
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

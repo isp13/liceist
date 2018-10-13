@@ -13,12 +13,13 @@ public class getstats : MonoBehaviour {
 	private float timer = 0;
  	private float timerMax = 0;
 	[SerializeField] private string loadlevel;
-	
-
+	private AudioSource source;
+ 	public AudioClip points;
 
 	void Start(){
 		GameObject maincharacter = GameObject.Find("Player");
 		GameObject load = GameObject.Find("loadingtab");
+		source = GetComponent<AudioSource>();
 		
 	}
 	void OnTriggerEnter2D (Collider2D other)
@@ -30,7 +31,9 @@ public class getstats : MonoBehaviour {
 					maincharacter.GetComponent<playerControl>().freezemovement();
 					load.SetActive(true);
 					maincharacter.GetComponent<Animator>().Play("loadingtaba");
+
 					StartCoroutine("wait");
+
 				 //load.SetActive(false);
 				 //maincharacter.GetComponent<playerControl>().unfreezemovement();
 				}
@@ -43,6 +46,7 @@ public class getstats : MonoBehaviour {
     //Do whatever you need done here before waiting
  
     yield return new WaitForSeconds (4f);
+    source.PlayOneShot(points);
 	load.SetActive(false);
 	if (whichstatstoup=="IQ")
 	{
