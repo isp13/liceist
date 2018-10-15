@@ -176,6 +176,4 @@ public class subject {
 	return subjects.Length;
 	}
 
-
-
 }

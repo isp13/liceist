@@ -77,10 +77,6 @@ public class Clock : MonoBehaviour {
 		while(true)
 		{
 
-
-
-
-
 			TimeText.text = "";
 			minutes++;
 			if (minutes == 60) {

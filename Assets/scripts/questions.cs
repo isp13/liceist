@@ -115,6 +115,11 @@ public class questions : MonoBehaviour {
 				
 	}
 
+	public void setmark()
+	{
+		
+	}
+
 
 
 
