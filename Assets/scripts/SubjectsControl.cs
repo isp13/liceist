@@ -15,6 +15,7 @@ public class SubjectsControl : MonoBehaviour {
 	public GameObject EndingPanel;
 	// Use this for initialization
 	void Start () {
+		
 
 		PlayerPrefs.SetInt("wasitvisited",0);
 
