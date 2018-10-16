@@ -21,6 +21,7 @@ public class questions : MonoBehaviour {
 	public quiz[] math=new quiz[10];
 	public quiz[] info=new quiz[10];
 	public quiz[] russ=new quiz[10];
+	public quiz[] teorpoz = new quiz[10];
 	public quiz[] main=new quiz[10];
 
 	void Start () {
@@ -48,7 +49,11 @@ public class questions : MonoBehaviour {
 		main [3] = new quiz (0,"Выберите неверно выделенное ударение в слове","ненАдолго","Иксы","понялА","снятА",'1');
 		main [4] = new quiz (1,"Выберите неверно выделенное ударение в слове","рвалА","прибылА","налилА","клалА",'4');
 
-
+		//PHILOSOPHY
+		teorpoz [0] = new quiz (0,"Как философия переводится с греческого языка?","Любовь к истине","Любовь к мудрости","Учение о мире","божественная мудрость",'2');
+		teorpoz [1] = new quiz (1,"Кто назвал себя первым философом?","Сократ","Аристотель","Пифагор","Цицерон",'3');
+		teorpoz [2] = new quiz (2,"Определиите время возниикновения философии","Середина 3 тыс до н.э","7-6 в.в до н.э","17-18 в.в","5-15 в.в",'2');
+		teorpoz [3] = new quiz (3,"Направлениие, отрицающее существования Бога","Атеизм","Скептицизм","Агностицизм","Неотомизм",'1');
 	}
 
 	public void Generate(string cls)
@@ -68,6 +73,13 @@ public class questions : MonoBehaviour {
 				main[i]=info[Random.Range(0,3)];
 
 		}
+		if (cls == "TEORP") {
+			for(int i=0;i<3;i++)
+				main[i]=teorpoz[Random.Range(0,3)];
+
+		}
+
+
 	}
 
 	public void ChangeLevel()
@@ -112,6 +124,9 @@ public class questions : MonoBehaviour {
 			if (answers [i] == (main [i].rightopt))
 				mark++;
 			}
+
+		PlayerPrefs.SetInt ("markforquiz",mark);
+
 				
 	}
 

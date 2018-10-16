@@ -816,12 +816,12 @@ Prefab:
     - target: {fileID: 212240749153048896, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.80831635
+      value: 0.8296146
       objectReference: {fileID: 0}
     - target: {fileID: 212240749153048896, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.8014706
+      value: 0.8235294
       objectReference: {fileID: 0}
     - target: {fileID: 212240749153048896, guid: 8807a029cbe3f458c8e72b0cb25b2fd9,
         type: 2}

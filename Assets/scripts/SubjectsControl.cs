@@ -20,6 +20,7 @@ public class SubjectsControl : MonoBehaviour {
 		PlayerPrefs.SetInt("wasitvisited",0);
 
 		if (!PlayerPrefs.HasKey ("lesson1")) {
+			PlayerPrefs.SetInt ("markforquiz",0);
 			PlayerPrefs.SetInt ("dayscount", 1);//days
 			PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
 			PlayerPrefs.SetInt ("lesson2", 0);//10:45-12:10
@@ -152,8 +153,8 @@ public class subject {
 	}
 
 
-	public string[] subjects = {"Математика","Теория Познания","Английский","Физика","Комп.Линглвистика"  };
-	public int[] rooms = {208,203,201,209,307 };
+	public string[] subjects = {"Математика","Теория Познания","Английский","Физика","Комп.Линглвистика","Базовая Информатика","Программирование","Русский язык","Теор. информатика"  };
+	public int[] rooms = {205,203,201,209,307,208,209,301,501 };
 
 	public void SubjectGenerate()
 	{

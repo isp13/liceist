@@ -111,7 +111,7 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(2f);//время в игре
+			yield return new WaitForSeconds(1f);//время в игре
 
 
 			PlayerPrefs.SetInt ("hours",hours);
@@ -128,24 +128,28 @@ public class Clock : MonoBehaviour {
 				if (PlayerPrefs.GetInt("wasitvisited")==1)
 				{
 					PlayerPrefs.SetInt("wasitvisited",0);
-					mark1.text="5";
+
+					mark1.text=PlayerPrefs.GetInt ("markforquiz").ToString();
 				}
 				else
 				{
 					mark1.text="H";
 				}
+				PlayerPrefs.SetInt ("markforquiz",0);
+
 			}
 			if (hours==12 && minutes==10 && PlayerPrefs.GetInt("amountoflessons")>=2)
 			{
 				if (PlayerPrefs.GetInt("wasitvisited")==1)
 				{
 					PlayerPrefs.SetInt("wasitvisited",0);
-					mark2.text="5";
+					mark2.text=PlayerPrefs.GetInt ("markforquiz").ToString();
 				}
 				else
 				{
 					mark2.text="H";
 				}
+				PlayerPrefs.SetInt ("markforquiz",0);
 
 			}
 
@@ -154,36 +158,39 @@ public class Clock : MonoBehaviour {
 				if (PlayerPrefs.GetInt("wasitvisited")==1)
 				{
 					PlayerPrefs.SetInt("wasitvisited",0);
-					mark3.text="5";
+					mark3.text=PlayerPrefs.GetInt ("markforquiz").ToString();
 				}
 				else
 				{
 					mark3.text="H";
 				}
+				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			if (hours==16 && minutes==10 && PlayerPrefs.GetInt("amountoflessons")>=4)
 			{
 				if (PlayerPrefs.GetInt("wasitvisited")==1)
 				{
 					PlayerPrefs.SetInt("wasitvisited",0);
-					mark4.text="5";
+					mark4.text=PlayerPrefs.GetInt ("markforquiz").ToString();
 				}
 				else
 				{
 					mark4.text="H";
 				}
+				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			if (hours==17 && minutes==45 && PlayerPrefs.GetInt("amountoflessons")>=5)
 			{
 				if (PlayerPrefs.GetInt("wasitvisited")==1)
 				{
 					PlayerPrefs.SetInt("wasitvisited",0);
-					mark5.text="5";
+					mark5.text=PlayerPrefs.GetInt ("markforquiz").ToString();
 				}
 				else
 				{
 					mark5.text="H";
 				}
+				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			PlayerPrefs.Save ();
 		}
