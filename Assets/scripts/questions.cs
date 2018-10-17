@@ -91,12 +91,17 @@ public class questions : MonoBehaviour {
 
 		}
 		else if (cls == "TEORP") {
-			for(int i=0;i<3;i++)
+			for(int i=0;i<5;i++)
 				main[i]=teorpoz[Random.Range(0,5)];
 
 		}
 		else if (cls == "HIST") {
-			for(int i=0;i<3;i++)
+			for(int i=0;i<5;i++)
+				main[i]=hist[Random.Range(0,5)];
+
+		}
+		else  {
+			for(int i=0;i<5;i++)
 				main[i]=hist[Random.Range(0,5)];
 
 		}
