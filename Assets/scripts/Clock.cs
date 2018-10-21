@@ -32,9 +32,13 @@ public class Clock : MonoBehaviour {
 
 
 	void Start () {
+		
+
+
+		PlayerPrefs.SetInt("wasitvisited",0);
 		fxSound = GetComponent<AudioSource> ();
 		fxSound.Play ();
-
+		
 
 
 		if (!PlayerPrefs.HasKey ("hours")) {
@@ -56,13 +60,10 @@ public class Clock : MonoBehaviour {
 		StartCoroutine(TestCoroutine());
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-
-
-
-
+		
 	}
 
 	public void settime(int h,int m)
@@ -111,8 +112,8 @@ public class Clock : MonoBehaviour {
 			if (minutes < 10)
 				TimeText.text += 0;
 			TimeText.text += minutes;
-			yield return new WaitForSeconds(2f);//время в игре
-
+			//yield return new WaitForSeconds(0.01f);//время в игре
+			if (hours==8 && minutes==31)mark1.text="";
 
 			PlayerPrefs.SetInt ("hours",hours);
 			PlayerPrefs.SetInt ("minutes",minutes);
@@ -133,6 +134,8 @@ public class Clock : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("1 was not visited");
+					PlayerPrefs.SetInt("KostilFirst",0);
 					mark1.text="H";
 				}
 				PlayerPrefs.SetInt ("markforquiz",0);
@@ -147,6 +150,8 @@ public class Clock : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("2 was not visited");
+					PlayerPrefs.SetInt("KostilSecond",0);
 					mark2.text="H";
 				}
 				PlayerPrefs.SetInt ("markforquiz",0);
@@ -162,6 +167,8 @@ public class Clock : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("3 was not visited");
+					PlayerPrefs.SetInt("KostilThird",0);
 					mark3.text="H";
 				}
 				PlayerPrefs.SetInt ("markforquiz",0);
@@ -175,7 +182,9 @@ public class Clock : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("4 was not visited");
 					mark4.text="H";
+					PlayerPrefs.SetInt("KostilFourth",0);
 				}
 				PlayerPrefs.SetInt ("markforquiz",0);
 			}
@@ -188,11 +197,15 @@ public class Clock : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log("5 was not visited");
+					PlayerPrefs.SetInt("KostilFifth",0);
 					mark5.text="H";
+
 				}
 				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			PlayerPrefs.Save ();
+			yield return new WaitForSeconds(2f);//время в игре
 		}
 	}
 }

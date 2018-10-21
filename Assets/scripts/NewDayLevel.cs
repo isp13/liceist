@@ -20,6 +20,9 @@ public class NewDayLevel : MonoBehaviour {
 		clk.settime (8, 30);
 		sb.cleanuptext();
 		PlayerPrefs.SetInt ("amountoflessons",Random.Range(2,6));
+		//
+		PlayerPrefs.SetInt ("amountoflessons",Random.Range(2,6));
+		//
 		Application.LoadLevel ("FirstFloor");
 		clk.StopAllCoroutines ();
 		dialogC.SetActive (true);

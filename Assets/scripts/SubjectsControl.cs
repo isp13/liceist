@@ -15,11 +15,10 @@ public class SubjectsControl : MonoBehaviour {
 	public GameObject EndingPanel;
 	// Use this for initialization
 	void Start () {
-		
-
-		PlayerPrefs.SetInt("wasitvisited",0);
 
 		if (!PlayerPrefs.HasKey ("lesson1")) {
+			PlayerPrefs.SetInt("wasitvisited",0);
+			
 			PlayerPrefs.SetInt ("markforquiz",0);
 			PlayerPrefs.SetInt ("dayscount", 1);//days
 			PlayerPrefs.SetInt ("lesson1", 0);//9:00-10:25
@@ -38,7 +37,7 @@ public class SubjectsControl : MonoBehaviour {
 		int k = PlayerPrefs.GetInt ("dayscount");
 		days.text = "ЭЛЕКТРОННЫЙ ЖУРНАЛ. День "+k.ToString();
 
-		Debug.Log (subjectscount);
+
 
 		if (PlayerPrefs.GetInt ("lesson1") == 0 || 1==1)//fix error with regenerating but not generating
 			DayStart ();
@@ -134,6 +133,8 @@ public class SubjectsControl : MonoBehaviour {
 		PlayerPrefs.SetInt ("lesson3", 0);//12:20-13:45
 		PlayerPrefs.SetInt ("lesson4", 0);//14:45-16:10
 		PlayerPrefs.SetInt ("lesson5", 0);//16:20-17:45
+		PlayerPrefs.SetInt ("markforquiz",0);
+		PlayerPrefs.SetInt ("wasitvisited",0);
 		PlayerPrefs.Save();
 	}
 		

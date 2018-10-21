@@ -100,13 +100,18 @@ public class questions : MonoBehaviour {
 				main[i]=hist[Random.Range(0,5)];
 
 		}
-		else  {
+		else if (cls=="LITER") {
 			for(int i=0;i<5;i++)
-				main[i]=hist[Random.Range(0,5)];
+				main[i]=liter[Random.Range(0,5)];
 
 		}
+		else
+		{
+			for(int i=0;i<5;i++)
+				main[i]=liter[Random.Range(0,5)];
+		}
 
-
+		StartQuiz ();
 	}
 
 	public void ChangeLevel()
@@ -168,6 +173,8 @@ public class questions : MonoBehaviour {
 
 	public void StartQuiz()
 	{
+		PlayerPrefs.SetInt ("markforquiz",0);
+
 		QuizCanvas.SetActive (true);
 		ChangeLevel ();
 		
