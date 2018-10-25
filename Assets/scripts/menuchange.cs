@@ -8,6 +8,7 @@ public class menuchange : MonoBehaviour {
 
 	public void gotogame ()
 	{
-		SceneManager.LoadScene("FirstFloor");
+		SceneManager.LoadScene ("FirstFloor");
+		
 	}
 }
