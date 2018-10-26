@@ -24,6 +24,7 @@ public class questions : MonoBehaviour {
 	public quiz[] hist = new quiz[10];
 	public quiz[] teorpoz = new quiz[10];
 	public quiz[] liter = new quiz[10];
+	public quiz[] engl=new quiz[10];
 	public quiz[] main=new quiz[10];
 
 	void Start () {
@@ -72,38 +73,43 @@ public class questions : MonoBehaviour {
 		liter [2] = new quiz (2, "Автор произведения Отцы и Дети", "Пушкин", "Достоевский", "Тургенев", "Маяковский", '3');
 		liter [3] = new quiz (3, "Что такое метонимия?", "Антоним", "Смежное понятие", "Гипербола", "Литературный повтор", '2');
 		liter [4] = new quiz (4, "Год рождения Пушкина", "1839", "1838", "1937", "1837", '4');
+
+		//English
+		engl[0]=new quiz(0,"Third form of the verb get","get","got","goten","gotten",'4');
+		engl [1] = new quiz (1,"What is the capital of Wales","London","Cardiff","Edinburgh","Belfast",'2');
+		engl [2] = new quiz (2,"Are you busy?","Yes i do","Yes i does","Yes i am","Yesn't",'3');
+		engl [3] = new quiz (3,"Second form of the verb fly","fly","flown","flied","flew",'4');
+		engl [4] = new quiz (4,"Third form of the verb drive","drive","driven","drived","drivened",'2');
 	}
 	public void Generate(string cls)
 	{
 		if (cls == "MATH") {
-			for(int i=0;i<5;i++)
-				main[i]=math[Random.Range(0,5)];
+			for (int i = 0; i < 5; i++)
+				main [i] = math [Random.Range (0, 5)];
 		
-		}
-		else if (cls == "RUSS") {
-			for(int i=0;i<5;i++)
-				main[i]=russ[Random.Range(0,5)];
+		} else if (cls == "RUSS") {
+			for (int i = 0; i < 5; i++)
+				main [i] = russ [Random.Range (0, 5)];
 
-		}
-		else if (cls == "INFO") {
-			for(int i=0;i<5;i++)
-				main[i]=info[Random.Range(0,5)];
+		} else if (cls == "INFO") {
+			for (int i = 0; i < 5; i++)
+				main [i] = info [Random.Range (0, 5)];
 
-		}
-		else if (cls == "TEORP") {
-			for(int i=0;i<5;i++)
-				main[i]=teorpoz[Random.Range(0,5)];
+		} else if (cls == "TEORP") {
+			for (int i = 0; i < 5; i++)
+				main [i] = teorpoz [Random.Range (0, 5)];
 
-		}
-		else if (cls == "HIST") {
-			for(int i=0;i<5;i++)
-				main[i]=hist[Random.Range(0,5)];
+		} else if (cls == "HIST") {
+			for (int i = 0; i < 5; i++)
+				main [i] = hist [Random.Range (0, 5)];
 
-		}
-		else if (cls=="LITER") {
-			for(int i=0;i<5;i++)
-				main[i]=liter[Random.Range(0,5)];
+		} else if (cls == "LITER") {
+			for (int i = 0; i < 5; i++)
+				main [i] = liter [Random.Range (0, 5)];
 
+		} else if (cls == "ENGL") {
+			for (int i = 0; i < 5; i++)
+				main [i] = engl [Random.Range (0, 5)];
 		}
 		else
 		{

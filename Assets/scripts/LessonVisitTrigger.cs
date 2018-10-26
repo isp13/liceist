@@ -12,6 +12,7 @@ public class LessonVisitTrigger : MonoBehaviour {
 	public Button RUSS;
 	public Button PHYSC;
 	public Button LITER;
+	public Button Engl;
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
@@ -35,6 +36,8 @@ public class LessonVisitTrigger : MonoBehaviour {
 				PHYSC.onClick.Invoke ();
 			if (classID == 403)
 				LITER.onClick.Invoke ();
+			if (classID == 209)
+				Engl.onClick.Invoke ();
 			
 				
 				
