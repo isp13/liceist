@@ -208,7 +208,7 @@ public class Clock : MonoBehaviour {
 				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			PlayerPrefs.Save ();
-			yield return new WaitForSeconds(0.01f);//время в игре
+			yield return new WaitForSeconds(2f);//время в игре
 		}
 	}
 }
