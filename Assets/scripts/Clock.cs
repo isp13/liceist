@@ -99,10 +99,13 @@ public class Clock : MonoBehaviour {
 				Debug.Log("visits: "+PlayerPrefs.GetInt ("visits") );
 				int lessloss = PlayerPrefs.GetInt ("amountoflessons") - PlayerPrefs.GetInt ("visits");
 				int iqlost=PlayerPrefs.GetInt("IQ")-startedwithiq;
+				if (iqlost < 0)
+					iqlost = 0;
 				iqtext.text="IQ заработано: "+iqlost.ToString();
 				freelessons.text="Пар пропущено: "+lessloss.ToString();
 				int scorescount=100+iqlost+lessloss;
 				scores.text="Очков получено: "+scorescount.ToString();
+				PlayerPrefs.SetInt ("ivr", PlayerPrefs.GetInt("ivr")+(iqlost/10)	);
 				DayEndingCan.SetActive (true);
 
 				//yield break;
@@ -205,7 +208,7 @@ public class Clock : MonoBehaviour {
 				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			PlayerPrefs.Save ();
-			yield return new WaitForSeconds(2f);//время в игре
+			yield return new WaitForSeconds(0.01f);//время в игре
 		}
 	}
 }

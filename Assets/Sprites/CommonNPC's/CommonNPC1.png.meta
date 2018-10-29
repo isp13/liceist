@@ -3,6 +3,13 @@ guid: 6aba9b462a1e042098840fc1ebae6091
 TextureImporter:
   fileIDToRecycleName:
     21300000: CommonNPC1_0
+    21300002: CommonNPC1_1
+    21300004: CommonNPC1_2
+    21300006: CommonNPC1_3
+    21300008: CommonNPC1_4
+    21300010: CommonNPC1_5
+    21300012: CommonNPC1_6
+    21300014: CommonNPC1_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -95,6 +102,104 @@ TextureImporter:
         serializedVersion: 2
         x: 150
         y: 55
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 8
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 150
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 103
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 150
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 101
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 54
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CommonNPC1_7
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 5
         width: 29
         height: 32
       alignment: 0
