@@ -86,7 +86,7 @@ public class Clock : MonoBehaviour {
 			}
 			if (hours==9 && minutes==0)
 				startedwithiq=PlayerPrefs.GetInt("IQ");
-			if(hours>=20)
+			if(hours==20 && minutes==01)
 			{
 				PlayerPrefs.SetInt ("needsnewday", 1);
 				dialogCan.SetActive (false);
@@ -106,6 +106,18 @@ public class Clock : MonoBehaviour {
 				int scorescount=100+iqlost+lessloss;
 				scores.text="Очков получено: "+scorescount.ToString();
 				PlayerPrefs.SetInt ("ivr", PlayerPrefs.GetInt("ivr")+(iqlost/10)	);
+
+				if (lessloss==PlayerPrefs.GetInt ("amountoflessons"))
+					PlayerPrefs.SetInt ("life", PlayerPrefs.GetInt ("life")-1);
+
+				if (PlayerPrefs.GetInt ("life") <= 0) {
+					daynum.text = "You lost";
+					PlayerPrefs.DeleteAll ();
+				}
+				
+
+
+
 				DayEndingCan.SetActive (true);
 
 				//yield break;
@@ -208,7 +220,7 @@ public class Clock : MonoBehaviour {
 				PlayerPrefs.SetInt ("markforquiz",0);
 			}
 			PlayerPrefs.Save ();
-			yield return new WaitForSeconds(2f);//время в игре
+			yield return new WaitForSeconds(0.01f);//время в игре
 		}
 	}
 }

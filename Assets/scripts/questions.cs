@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 
 public class questions : MonoBehaviour {
+	public playerControl pl;
 	public GameObject QuizCanvas;
 	public GameObject npcs;
 	public GameObject joy;
@@ -26,6 +27,7 @@ public class questions : MonoBehaviour {
 	public quiz[] liter = new quiz[10];
 	public quiz[] engl=new quiz[10];
 	public quiz[] main=new quiz[10];
+	public quiz[] phys=new quiz[10];
 
 	void Start () {
 		//MATH
@@ -80,6 +82,12 @@ public class questions : MonoBehaviour {
 		engl [2] = new quiz (2,"Are you busy?","Yes i do","Yes i does","Yes i am","Yesn't",'3');
 		engl [3] = new quiz (3,"Second form of the verb fly","fly","flown","flied","flew",'4');
 		engl [4] = new quiz (4,"Third form of the verb drive","drive","driven","drived","drivened",'2');
+
+		phys[0]=new quiz(0,"Кто сформулировал закон Ома","Марк Ом","Георг Ом","Барлоу","Игрих Ом",'2');
+		phys [1] = new quiz (1,"Наименьшая часть вещества","Ядро","Молекула","Електрон","Атом",'4');
+		phys [2] = new quiz (2,"Чему равна сила тяжести на Земле?","10м/c2","9.8м/c","9.7м/с2","9.8м/c2",'4');
+		phys [3] = new quiz (3,"Что описывает закон всемирного тяготения?","гравитационное взаимодействие тел","взаимодействие тел","напряженность между телами","скорость тел",'1');
+		phys [4] = new quiz (4,"О чем говорит закон Кулона?","о векторах движений тел","о силе взаимодействия эл зарядов","о массе тел","о скорости тел",'2');
 	}
 	public void Generate(string cls)
 	{
@@ -110,6 +118,9 @@ public class questions : MonoBehaviour {
 		} else if (cls == "ENGL") {
 			for (int i = 0; i < 5; i++)
 				main [i] = engl [Random.Range (0, 5)];
+		}else if (cls == "PHYS") {
+			for (int i = 0; i < 5; i++)
+				main [i] = phys [Random.Range (0, 5)];
 		}
 		else
 		{
@@ -179,6 +190,8 @@ public class questions : MonoBehaviour {
 
 	public void StartQuiz()
 	{
+		pl.freezemovement ();
+		
 		PlayerPrefs.SetInt ("markforquiz",0);
 
 		QuizCanvas.SetActive (true);
@@ -187,6 +200,7 @@ public class questions : MonoBehaviour {
 	}
 	public void EndQuiz()
 	{
+		pl.unfreezemovement ();
 		
 		checkResults ();
 		Debug.Log ("MARK "+mark);
