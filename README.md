@@ -1,6 +1,6 @@
 #  Liceist #
-> Чтобы скачать- обратитесь на почту к создателю для получения инвайта
->If you want to download it- email me to get an invitation. ###
+* Чтобы скачать- обратитесь на почту к создателю для получения инвайта
+* If you want to download it- email me to get an invitation.
 
 
 >The Liceist provides players the opportunity of experiencing a light-hearted insight into everyday school life with the main objective being that of studying!
