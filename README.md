@@ -8,7 +8,12 @@
 * Level-up your IQ for getting good grades.
 * Learn how to manage your time.
 * Discover similarities in all aspects between game and real lyceum.
-
+### main menu ###
+![menu](https://pp.userapi.com/c846321/v846321654/11db84/BDigZ7AO0QY.jpg)
+### how to play ###
+![tutorial](https://pp.userapi.com/c846321/v846321654/11db8e/tHNjR3nKsGk.jpg)
 ### gameplay ###
+![gameplay](https://pp.userapi.com/c846321/v846321654/11db7a/IdaCkox4mw0.jpg)
+
 ![](showup1.gif)
 ![](showup2.gif)
