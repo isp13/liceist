@@ -6,10 +6,12 @@
 >The Liceist provides players the opportunity of experiencing a light-hearted insight into everyday school life with the main objective being that of studying!
 
 
-* Try hard study smart.
+* Try hard & study smart.
 * Level-up your IQ for getting good grades.
 * Learn how to manage your time.
 * Discover similarities in all aspects between game and real lyceum.
+* Be ready to cope with ivr work and lyceum lessons.
+
 ### main menu ###
 ![menu](https://pp.userapi.com/c846321/v846321654/11db84/BDigZ7AO0QY.jpg)
 ### how to play ###
