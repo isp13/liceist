@@ -1,4 +1,5 @@
 #  Liceist #
+>Весь код проекта в папке ~/Assets/Scripts
 * Чтобы скачать- обратитесь на почту к создателю для получения инвайта
 * If you want to download it- email me to get an invitation.
 
