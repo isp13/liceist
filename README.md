@@ -21,5 +21,3 @@
 ### gameplay ###
 ![gameplay](https://pp.userapi.com/c846321/v846321654/11db7a/IdaCkox4mw0.jpg)
 
-![](showup1.gif)
-![](showup2.gif)
