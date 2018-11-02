@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//выборочное управление персонажами в игре- взад-вперед или рандомное
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -103,11 +104,6 @@ public class Person : MonoBehaviour{
 		walkCounter = walkTime;
 
 	}
-
-
-	
-
-
 
 	void OnTriggerEnter2D (Collider2D other)//начинаем диалог когда гг приближается к персу
 	{

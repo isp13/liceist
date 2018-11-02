@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//система управление героем
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,20 +60,7 @@ public class playerControl : MonoBehaviour {
 		else if (joystick.Horizontal  < -0.5f) anim.Play ("Left");
 		else if(joystick.Vertical >= 0.5f) anim.Play ("Up");
 		else if(joystick.Vertical < -0.5f) anim.Play ("Down");
-
-	//rb2d.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal")* moveSpeed, 0.8f),
-			//Mathf.Lerp(0, Input.GetAxis("Vertical")* moveSpeed, 0.8f));
-
-		//if (Input.GetAxisRaw ("Horizontal") >= 0.5f) anim.Play ("Right");
-		//else if (Input.GetAxisRaw ("Horizontal") < -0.5f) anim.Play ("Left");
-		//else if(Input.GetAxisRaw ("Vertical") >= 0.5f) anim.Play ("Up");
-		//else if(Input.GetAxisRaw ("Vertical") < -0.5f) anim.Play ("Down");
-
-	
 	}
-
-
-
 }
 
 

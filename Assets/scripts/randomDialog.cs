@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+ Вывод рандомной фразы у персонажей посредством отслеживания времени и рандомных решений
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

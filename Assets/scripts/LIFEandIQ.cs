@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//система контроля интеллекта жизней и энергии
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,11 +38,6 @@ public class LIFEandIQ : MonoBehaviour {
 				heart3.SetActive (true);
 			}
 		}
-
-
-
-
-
 
 		if (!PlayerPrefs.HasKey ("IQ")) {
 			iqcount = 10;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//система получения знаний и энергии путем чтения книг и питания в столовой соответственно
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

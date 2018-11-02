@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+  Скрипт смены игровых сцен- телепортации в указанную точку хуz координат
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

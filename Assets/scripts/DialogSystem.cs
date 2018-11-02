@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Система диалогов
+ * контроль вывода сообщения на экран с анимацией
+ * хранилище диалогов определенных пользователей
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

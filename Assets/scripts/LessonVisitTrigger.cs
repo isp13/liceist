@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+ 	Система распознавания посещения по trigger флагу объектов
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +16,7 @@ public class LessonVisitTrigger : MonoBehaviour {
 	public Button PHYSC;
 	public Button LITER;
 	public Button Engl;
+	public Button hist;
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
@@ -38,7 +42,8 @@ public class LessonVisitTrigger : MonoBehaviour {
 				LITER.onClick.Invoke ();
 			if (classID == 209)
 				Engl.onClick.Invoke ();
-			
+			if (classID == 304)
+				hist.onClick.Invoke ();
 				
 				
 				

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//система вывода имен у героев
+//продвинутая оптимизация памяти при выводе
+using UnityEngine;
 using System.Collections;
 using System.Text.RegularExpressions;
 
@@ -32,8 +34,6 @@ public class ObjectNameView : MonoBehaviour {
 
 	void OnGUI()
 	{
-
-
 		GUI.depth = 9999;
 
 		GUIStyle style = new GUIStyle();
@@ -57,11 +57,8 @@ public class ObjectNameView : MonoBehaviour {
 		if(showShadow) GUI.Label(new Rect (screenPosition.x + shadowOffset.x, screenPosition.y + shadowOffset.y, 0, 0), textShadow, shadow);
 		GUI.Label(new Rect (screenPosition.x, screenPosition.y, 0, 0), text, style);
 
-		//StartCoroutine(waiter());
-		
-		//waiter();
 		GUI.Label(new Rect (screenPosition.x, screenPosition.y-40, 0, 0), sentencetodisplay, style);
-		//GUI.Box(new Rect(screenPosition.x, screenPosition.y, 0, 0), BoxTexture, style);
+
 	}
 
 	void OnBecameVisible() 

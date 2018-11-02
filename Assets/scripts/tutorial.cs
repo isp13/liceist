@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//аналоговая система обучения
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

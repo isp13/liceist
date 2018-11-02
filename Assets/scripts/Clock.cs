@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*Система контроля времени в игре
+-вывод изменившегося времени
+-контроль посещаемости предмета в определенное время
+-контроль окончания дня
+-подсчет статистики за день
+
+
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

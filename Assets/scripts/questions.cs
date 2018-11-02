@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//Система проведения зачета в учебное время- quiz
+//вывод вопросов и выставление оценок
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

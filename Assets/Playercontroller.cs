@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//управление персонажем для пк версии
+using UnityEngine;
 using System.Collections;
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed;

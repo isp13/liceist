@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿//Код электронного журнала
+//контроль генерации и вывода предметов в журнал
+//вывод оценок и энок
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

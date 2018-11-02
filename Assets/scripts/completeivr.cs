@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+ Контроль готовности исследовательской работы 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

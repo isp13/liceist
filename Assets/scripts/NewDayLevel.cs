@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//код, отвечающий за завершение и начала генерации нового дня
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
