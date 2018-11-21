@@ -1,8 +1,6 @@
 #  Liceist #
-<<<<<<< HEAD
-=======
 >Весь код проекта в папке ~/Assets/Scripts
->>>>>>> ca5a1f6d43fa396850903f818acd881e99f79715
+
 * Чтобы скачать- обратитесь на почту к создателю для получения инвайта
 * If you want to download it- email me to get an invitation.
 
@@ -23,5 +21,3 @@
 ### gameplay ###
 ![gameplay](https://pp.userapi.com/c846321/v846321654/11db7a/IdaCkox4mw0.jpg)
 
-![](showup1.gif)
-![](showup2.gif)
